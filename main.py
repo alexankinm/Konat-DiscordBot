@@ -410,4 +410,4 @@ async def bird(ctx):
 
 
 
-bot.run(os.environ["bot_token"])
+bot.run("TOKEN HERE")
