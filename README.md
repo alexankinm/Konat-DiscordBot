@@ -13,4 +13,4 @@ $ cd Konat-DiscordBot
 > **Примечание:** \
 *Код неполноценный* \
 *Лучше работать с disnake, discord.py не поддерживается* \
-*В случае ошибок/багов, отписать в [Telegram](@AlexanMaks)*
+*В случае ошибок/багов, отписать в [Telegram](https://t.me/AlexanMaks)*
