@@ -24,10 +24,7 @@ bot = commands.Bot(
 )
 bot.remove_command('help')
 
-#@bot.event
-#async def on_message(msg):
-#	msgx = msg.content.lower()
-#print(f'{msg.guild.name} | {msg.author.name}#{msg.author.discriminator} | {msg.author.id}: {msgx}')
+
 
 
 # Events
@@ -37,9 +34,6 @@ async def on_ready():
     await bot.change_presence(activity=discord.Activity(
         name=f'{prefix}help | {len(guilds)} серверов',
         type=discord.ActivityType.watching))
-    #  await bot.change_presence(activity=discord.Game(name="{prefix}help | {len(guilds)} серверов"))
-    #  print(f"Бот {bot.user} успешно запущен.")
-    #  print(f'[Discord] Bot Started: {bot.user.name}#{bot.user.discriminator} | {bot.user.id}')
     print(f"Beep beep! 🤖")
     print(f" ")
     servers = list(bot.guilds)
@@ -88,7 +82,7 @@ async def on_command_error(ctx, error):
     else:
         print(error)
 
-        report_errror_channel = bot.get_channel(963854979993587802)
+        report_errror_channel = bot.get_channel(CHANNEL_ID)
         await report_errror_channel.send(f'```{error}```')
 
         embederror = discord.Embed(
@@ -160,15 +154,6 @@ async def youtube(ctx, *, search):
     print(search_results)
     # I will put just the first result, you can loop the response to show more results
     await ctx.send('https://www.youtube.com/watch?v=' + search_results[0])
-
-
-@bot.command(pass_context=True)
-@commands.has_permissions(administrator=True)
-async def mute(ctx, user_id, userName: discord.User):
-    user = ctx.message.author
-    role = discord.utils.get(user.server.roles, name="•┆๑💀๑∴Мьют∴")
-    await ctx.author.add_roles(user, role)
-
 
 @bot.command(brief='Банить участников сервера')
 @commands.has_permissions(ban_members=True)
@@ -245,7 +230,7 @@ async def create_invites(ctx):
 @bot.command()
 async def invite(ctx):
     await ctx.author.send(
-        'Пригласить меня на свой сервер: https://discord.com/api/oauth2/authorize?client_id=939606679224459334&permissions=8&scope=bot'
+        'Пригласить меня на свой сервер: ССЫЛКА НА БОТА'
     )
 
     embed = discord.Embed(
@@ -272,7 +257,7 @@ async def avatar(ctx, member: discord.Member = None):
 @bot.event
 async def on_message(message):
     await bot.process_commands(message)
-    if message.content == "<@939606679224459334>":
+    if message.content == "<@BOT_ID>":
         await message.channel.send(f'Мой префикс на этом сервере: ``{prefix}``'
                                    )
 
