@@ -1,16 +1,10 @@
-# Бот для сервера дискорд
+# Bot for discord server
 
-## Установка 🎈
-```
-$ git clone https://github.com/alexankinm/Konat-DiscordBot.git
-$ cd Konat-DiscordBot
-```
+## Using 🎈
+- In file `bot.py`, write the relevant data into the variables.
+- Run the file `python bot.py`
 
-## Использование 🎈
-- В файл `bot.py`, в переменные записать соответствующие данные.
-- Запустить файл `python bot.py`
-
-> **Примечание:** \
-*Код неполноценный* \
-*Лучше работать с disnake, discord.py не поддерживается* \
-*В случае ошибок/багов, отписать в [Telegram](https://t.me/AlexanMaks)*
+> **Note:** \
+*The code is incomplete* \
+*Better to work with disnake, discord.py is not supported* \
+*In case of errors/bugs, report back to [Telegram](https://t.me/AlexanMaks)*
